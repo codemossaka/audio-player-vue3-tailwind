@@ -1,18 +1,21 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="audio" class="player-wrapper">
+    <AudioPlayer
+        file="https://api.songofgod.ru/files/fr/crois_seulement/audios/005.mp3"></AudioPlayer>
+    <AudioTailwind/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import AudioPlayer from "@/components/AudioPlayer";
+import AudioTailwind from "@/components/AudioTailwind";
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    AudioTailwind,
+    AudioPlayer
   }
 }
 </script>
